@@ -24,7 +24,7 @@ class MyClient(discord.Client):
                 response = model.generate_content(user)
 
                 #messageTosend=response.choices[0].text
-                await channel.send(response.text)
+                await channel.send(response.text[:2000])
 
 
 intents = discord.Intents.default()
